@@ -6,8 +6,9 @@ $date = $_POST['date'];
 $category = $_POST['category'];
 $comment = $_POST['comment'];
 
-$sql = "INSERT INTO transaction (name, price, date, category, comment) ";
+$sql = "INSERT INTO income (name, price, date, category, comment) ";
 $sql .= "VALUES ('$name', '$price', '$date', '$category', '$comment')";
+
 if (mysqli_query($conn, $sql)) {
     header('location: index.php');
 } else {
